@@ -8,7 +8,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 var map = new kakao.maps.Map(mapContainer, mapOption); 
 
 
-//마커코드----------------------------------------------------------------
+//마커코드---------------------------------------------------------------------------------
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 // 마커가 표시될 위치입니다 
@@ -24,3 +24,5 @@ marker.setMap(map);
 
 // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
 // marker.setMap(null);    
+
+//----------------------------------------------------------------------------------------
