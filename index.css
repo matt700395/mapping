@@ -183,7 +183,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 5px;
+        padding-top: 10px;
     }
     
     .title-box {
@@ -218,18 +218,17 @@ header {
 /* INFO */
 .info {
     position: absolute;
-    height: 23rem;
+    height: 40rem;
     background-color: white;
     z-index: 10;
     width: 100%;
-    top: 52vh;
+    top: 100vh;
     font-family: 'LeferiPoint-WhiteObliqueA';
     text-align: center;
     display: flex;
     flex-direction: column;
     border-radius: 1.5rem 1.5rem 0 0;
 }
-
 
 .info-title-box {
     display: flex;
@@ -267,4 +266,27 @@ h2 {
     .info-title-box {
         padding: 1rem;
     }
+}
+
+/**/
+#tag {
+    cursor: pointer;
+}
+
+.tag-marker {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    z-index: 50;
+    background: white;
+    border-radius: 10rem;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    transition-property: transform;        
+    transition-duration: 0.7s;       
+    transition-timing-function: ease;
+    -webkit-transition-property: transform;        
+    -webkit-transition-duration: 0.7s;      
+    -webkit-transition-timing-function: ease;
 }

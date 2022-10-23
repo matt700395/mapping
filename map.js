@@ -11,11 +11,11 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 // // // marker.setMap(null);    
 
 // 마커이벤트 1
-var MARKER_WIDTH = 33, // 기본, 클릭 마커의 너비
+var MARKER_WIDTH = 36, // 기본, 클릭 마커의 너비
     MARKER_HEIGHT = 36, // 기본, 클릭 마커의 높이
     OFFSET_X = 12, // 기본, 클릭 마커의 기준 X좌표
     OFFSET_Y = MARKER_HEIGHT, // 기본, 클릭 마커의 기준 Y좌표
-    OVER_MARKER_WIDTH = 40, // 오버 마커의 너비
+    OVER_MARKER_WIDTH = 42, // 오버 마커의 너비
     OVER_MARKER_HEIGHT = 42, // 오버 마커의 높이
     OVER_OFFSET_X = 13, // 오버 마커의 기준 X좌표
     OVER_OFFSET_Y = OVER_MARKER_HEIGHT, // 오버 마커의 기준 Y좌표
@@ -136,6 +136,7 @@ function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
     kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
 
 }
+
 
 // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
 function makeOverListener(map, marker, infowindow) {
