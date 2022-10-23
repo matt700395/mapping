@@ -1,3 +1,4 @@
+/* RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,6 +43,7 @@ table {
 	border-spacing: 0;
 }
 
+/* FONT */
 @font-face {
     font-family: 'HSSummer';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSSummer.woff') format('woff');
@@ -56,10 +58,11 @@ table {
     font-style: normal;
 }
 
+
+/* HEADER */
 header {
     background: linear-gradient(#977CE2, #B6A5E7, transparent);
     padding-bottom: 4rem;
-    padding: 0.5rem;
     position: absolute;
     height: 7rem;
     z-index: 10;
@@ -88,12 +91,6 @@ header {
     padding-top: 0.2rem;
 }
 
-.menu {
-    color: white;
-    padding-left: 1em;
-    font-family: 'LeferiPoint-WhiteObliqueA';
-}
-
 .bubble-left {
     margin-top: 0.5rem;
     margin-left: 3rem;
@@ -108,4 +105,100 @@ header {
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
+}
+
+@media ( max-width: 867px ) {
+    header {
+        padding-bottom: 4rem;
+        position: absolute;
+        height: 10rem;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 5px;
+    }
+    
+    .title-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        padding-top: 0.2rem;
+    }
+
+    .bubble-left {
+        width: 10rem;
+        margin: 1rem auto;
+    }
+    
+    .bubble-right {
+        width: 10rem;
+        margin-top: 1rem;
+        margin: 1rem auto;
+    }
+}
+  
+
+
+/* INFO */
+.info {
+    position: absolute;
+    height: 23rem;
+    background-color: white;
+    z-index: 10;
+    width: 100%;
+    top: 52vh;
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+
+.info-title-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    padding: 2rem;
+    margin-top: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.close-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.close-btn:hover {
+    background-color: transparent;
+    border: none;
+    color: #977CE2;
+    transition: 0.5s;
+}
+
+.content {
+    text-align: left;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+@media ( max-width: 862px ) {
+    .info-title-box {
+        padding: 1rem;
+    }
 }
