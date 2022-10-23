@@ -61,10 +61,23 @@ for (var i = 0, len = positions.length; i < len; i++) {
         
     // 마커를 생성하고 지도위에 표시합니다
     addMarker(positions[i].latlng, normalOrigin, overOrigin, clickOrigin, positions[i].title);
+    nowWindowSize()
 
 }
 
-
+//현재 브라우저크기 변하면 중심을 다시 셋팅하는 함수
+function nowWindowSize() {
+    //브라우저 크기 변경 감지
+    let now_size = window.innerWidth;
+    setTimeout(50);
+    if(now_size !== window.innerWidth){
+    //원래 중심좌표로 돌아감
+    mapOption = { 
+        center: new kakao.maps.LatLng(36.601659208879646, 127.29777601594054)
+    };
+    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+}
+}
 
 // 마커를 생성하고 지도 위에 표시하고, 마커에 mouseover, mouseout, click 이벤트를 등록하는 함수입니다
 function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
