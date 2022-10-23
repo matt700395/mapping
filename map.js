@@ -217,4 +217,10 @@ function setDraggable(draggable) {
 
 document.getElementById("title").onclick = function () {
     map.setCenter(new kakao.maps.LatLng(36.601659208879646, 127.29777601594054));
+    document.getElementById("info").style.transition = "all 1s";
+    document.getElementById("info").style.top = "100vh";
+    document.getElementById("tag-marker").style.transform = "scale(1, 1)";
+    document.getElementsByClassName("tags")[0].style.transform = "scale(1, 1)";
+    document.getElementsByClassName("tags")[1].style.transform = "scale(1, 1)";
+    document.getElementsByClassName("tags")[2].style.transform = "scale(1, 1)";
 }

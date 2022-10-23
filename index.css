@@ -511,3 +511,24 @@ b {
         text-align: center;
     }
 }
+
+footer {
+    z-index: 100;
+    position: absolute;
+    bottom: 1rem;
+    background-color: white;
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    z-index: 100;
+    position: absolute;
+    bottom: 4rem;
+    right: 2rem;
+    height: 10rem;
+    width: 10rem;
+}
