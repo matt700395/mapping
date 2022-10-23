@@ -96,6 +96,7 @@ header {
     color: white;
     font-size: 3rem;
     cursor: pointer;
+    margin-bottom: 0.5rem;
 }
 
 .title span {
@@ -135,7 +136,8 @@ header {
     .title span {
         position: relative;
         animation: anime_textup 1.5s infinite;
-        margin: -0.15rem;
+        margin-left: -0.3em;
+        margin-right: -0.3em;
     }
     .title span:nth-of-type(1) {
         animation-delay: .1s;
@@ -233,6 +235,12 @@ header {
         margin: 1rem auto;
     }
 
+    .title span {
+        position: relative;
+        animation: anime_textup 1.5s infinite;
+        margin-right: -0.05em;
+        margin-left: -0.05em;
+    }
 }
   
 
