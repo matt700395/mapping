@@ -42,9 +42,21 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+button {
+    border: none;
+    background-color: transparent;
+}
 
 
 /* FONT */
+@font-face {
+    font-family: 'title';
+    src: url('Big\ Heroes\ Free\ Trial.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 @font-face {
     font-family: 'HSSummer';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSSummer.woff') format('woff');
@@ -62,7 +74,7 @@ table {
 
 /* HEADER */
 header {
-    background: linear-gradient(#977CE2, #B6A5E7, transparent);
+    background: linear-gradient(#7A4696, #A673C1, transparent);
     padding-bottom: 4rem;
     position: absolute;
     height: 7rem;
@@ -82,7 +94,15 @@ header {
 .title {
     font-family: 'HSSummer';
     color: white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.title span {
+    font-family: 'title';
+    color: white;
     font-size: 2.5rem;
+    cursor: pointer;
 }
 
 .subtitle {
@@ -174,7 +194,7 @@ header {
 
 
 
-@media ( max-width: 955px ) {
+@media ( max-width: 1066px ) {
     header {
         padding-bottom: 4rem;
         position: absolute;
@@ -212,6 +232,7 @@ header {
         margin-top: 1rem;
         margin: 1rem auto;
     }
+
 }
   
 
@@ -228,13 +249,13 @@ header {
     display: flex;
     flex-direction: column;
     border-radius: 1.5rem 1.5rem 0 0;
+    overflow-y: scroll;
 }
 
 .info-title-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 90%;
     padding: 2rem;
     margin-top: 0.5rem;
 }
@@ -252,7 +273,7 @@ h2 {
 .close-btn:hover {
     background-color: transparent;
     border: none;
-    color: #977CE2;
+    color: #7A4696;
     transition: 0.5s;
 }
 
@@ -262,9 +283,14 @@ h2 {
     padding-left: 1rem;
 }
 
-@media ( max-width: 862px ) {
+@media ( max-width: 1066px ) {
     .info-title-box {
         padding: 1rem;
+    }
+
+    .info {
+        height: 76vh;
+        margin-top: 4rem;
     }
 }
 
@@ -279,7 +305,7 @@ h2 {
     top: 43vh;
     left: 45vw;
     z-index: 50;
-    background: #B6A5E7;
+    background: #7A4696;
     border-radius: 10rem;
     width: 8rem;
     height: 8rem;
@@ -290,7 +316,7 @@ h2 {
     -webkit-transition-property: transform;        
     -webkit-transition-duration: 0.7s;      
     -webkit-transition-timing-function: ease;
-    border: 2px solid #977CE2;
+    border: 2px solid #4C2E5C;
     vertical-align: center;
     color: white;
     display: flex;
@@ -316,7 +342,7 @@ h2 {
     position: absolute;
     z-index: 50;
     background: white;
-    border: 2px solid #977CE2;
+    border: 2px solid #7A4696;
     border-radius: 10rem;
     text-align: center;
     display: flex;
@@ -361,4 +387,127 @@ h2 {
     height: 7rem;
     animation: tag3 2s infinite;
     animation-timing-function: ease-in-out;
+}
+
+
+/*
+content
+*/
+.map-vector {
+    position: absolute;
+}
+
+.content-title {
+    font-family: 'HSSummer';
+    position: relative;
+}
+
+.content-title span {
+    position: absolute;
+    display: block;
+    left: 2rem;
+    top: 3.5rem;
+    font-size: 2.2rem;
+    width: 20rem;
+    text-align: left;
+    color: #4C2E5C;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    padding-left: 5rem;
+}
+
+.content-container {
+    margin-top: 1rem;
+}
+
+.content {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-item {
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #7A4696 ;
+    border-bottom: 2px solid #7A4696;
+    margin: 0.5rem;
+}
+
+.item-container {
+    width: 45%;
+    padding: 1rem;
+    margin: 0.5rem;
+    display: block;
+}
+
+.content-question {
+    padding-left: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-item {
+    height: 5rem;
+    border: 1px solid #7A4696;
+    border-radius: 3rem;
+    display: block;
+    padding: 1.5rem 2rem;
+    text-align: center;
+
+}
+
+
+@media ( max-width: 988px ) {
+    .item-container {
+        width: 95%;
+    }
+}
+
+b {
+    font-weight: bold;
+    background-color: #E5CBF3;
+}
+
+.bold {
+    font-family: 'HSSummer';
+    font-size: 1.5rem;
+}
+
+.desc {
+    text-align: right;
+    line-height: 2;
+    margin-right: 2rem;
+    color: #4C2E5C;
+}
+
+.side-title {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media ( max-width: 780px ) {
+    .map-vector {
+        top: 6rem;
+    }
+
+    .content-title span { 
+        top: 9rem;
+    }
+
+    .content-container {
+        margin-top: 7.5rem;
+    }
+    
+    .content { 
+        margin-top: 1.5rem;
+    }
+
+    .tag-container { 
+        padding-left: 0.5rem;
+        text-align: center;
+    }
 }

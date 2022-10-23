@@ -214,3 +214,7 @@ function setDraggable(draggable) {
     // 마우스 드래그로 지도 이동 가능여부를 설정합니다
     map.setDraggable(draggable);    
 }
+
+document.getElementById("title").onclick = function () {
+    map.setCenter(new kakao.maps.LatLng(36.601659208879646, 127.29777601594054));
+}
