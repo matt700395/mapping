@@ -121,9 +121,10 @@ function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
     // 마커에 click 이벤트를 등록합니다
     kakao.maps.event.addListener(marker, 'click', function() {
 
-        // 클릭된 마커가 없고, click 마커가 클릭된 마커가 아니면
+        // 클릭된 마커가 없거나, click 마커가 클릭된 마커가 아니면
         // 마커의 이미지를 클릭 이미지로 변경합니다
-        if (!selectedMarker || selectedMarker !== marker) {
+        // !selectedMarker || selectedMarker !== marker
+        if (true) {
 
             // 클릭된 마커 객체가 null이 아니면
             // 클릭된 마커의 이미지를 기본 이미지로 변경하고
@@ -131,6 +132,12 @@ function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
 
             // 현재 클릭된 마커의 이미지는 클릭 이미지로 변경합니다
             marker.setImage(clickImage);
+
+            // tag 컴포넌트 띄우기 
+            document.getElementById("tag-marker").style.display = "block";
+            document.getElementById("tag-marker").style.transform = "scale(1, 1)";
+            document.getElementById("tag-back").style.display = "block";
+            setDraggable(false);
 
             panTo(position);
         }
@@ -180,4 +187,9 @@ function createMarkerImage(markerSprite, markerSize, offset, spriteOrigin) {
     return markerImage;
 }
 
+// 버튼 클릭에 따라 지도 이동 기능을 막거나 풀고 싶은 경우에는 map.setDraggable 함수를 사용합니다
+function setDraggable(draggable) {
+    // 마우스 드래그로 지도 이동 가능여부를 설정합니다
+    map.setDraggable(draggable);    
+}
 

@@ -276,8 +276,8 @@ h2 {
 
 .tag-marker {
     position: absolute;
-    top: 50vh;
-    left: 50vw;
+    top: 43vh;
+    left: 45vw;
     z-index: 50;
     background: white;
     border-radius: 10rem;
@@ -292,6 +292,7 @@ h2 {
     -webkit-transition-timing-function: ease;
     border: 2px solid #977CE2;
     vertical-align: center;
+    display: none;
 }
 
 #tag-back {
@@ -301,5 +302,6 @@ h2 {
     position: absolute;
     height: 100%;
     z-index: 5;
-    top:0
+    top:0;
+    display: none;
 }
