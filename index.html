@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body>
-
-
 <body style="position: relative; overflow: hidden;">
     <header>
         <img class="bubble-left"  src="bubble.png" height="30rem">
@@ -45,9 +42,7 @@
 
     <!-- 지도를 표시할 div 입니다 -->
     <div id="map" style="width:100vw; height:100vh;"></div>
-    <!--
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=302d6955de9eba8ef692e4e4f54c0bc4"></script>
-    -->
 
     <button onclick="openInfo()" id="tag">
         <div class="tag-marker" id="tag-marker">
@@ -69,19 +64,7 @@
 
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=59e2e9a3192ec8f154b0fb1e5ebf29a6"></script>
     <script  type="text/javascript" src="./map.js"></script>
-
-    <script>
-        function openInfo() {
-            document.getElementById("info").style.transition = "all 1s";
-            document.getElementById("info").style.top = "16vh";
-            document.getElementById("tag-marker").style.transform = "scale(0, 0)";
-        }
-        function closeInfo() {
-            document.getElementById("info").style.transition = "all 1s";
-            document.getElementById("info").style.top = "100vh";
-            document.getElementById("tag-marker").style.transform = "scale(1, 1)";
-        }
-    </script>
+    <script type="text/javascript" src="detail.js"></script>
 </body>
 </html>
 

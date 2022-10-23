@@ -43,6 +43,7 @@ table {
 	border-spacing: 0;
 }
 
+
 /* FONT */
 @font-face {
     font-family: 'HSSummer';
@@ -219,6 +220,7 @@ header {
 .info {
     position: absolute;
     height: 40rem;
+    height: 52vh;
     background-color: white;
     z-index: 10;
     width: 100%;
