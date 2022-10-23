@@ -11,22 +11,53 @@
 }
 
 header {
-    background: linear-gradient(#83B7A7, transparent);
+    background: linear-gradient(#977CE2, #B6A5E7, transparent);
     padding-bottom: 4rem;
     padding: 0.5rem;
     position: absolute;
-    height: 5rem;
+    height: 7rem;
     z-index: 10;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {
     font-family: 'HSSummer';
     color: white;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-family: 'HSSummer';
+    color: white;
+    font-size: 1.4rem;
+    padding-top: 0.2rem;
 }
 
 .menu {
-    margin-right: 1rem;
+    color: white;
+    padding-left: 1em;
+}
+
+.bubble-left {
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.bubble-right {
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
 }
