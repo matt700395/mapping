@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'HSSummer';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSSummer.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    background: linear-gradient(#83B7A7, transparent);
+    padding-bottom: 4rem;
+    padding: 0.5rem;
+    position: absolute;
+    height: 5rem;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'HSSummer';
+    color: white;
+}
+
+.menu {
+    margin-right: 1rem;
+}
