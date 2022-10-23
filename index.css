@@ -215,12 +215,10 @@ header {
 }
   
 
-
 /* INFO */
 .info {
     position: absolute;
-    height: 40rem;
-    height: 52vh;
+    height: 85vh;
     background-color: white;
     z-index: 10;
     width: 100%;
@@ -269,6 +267,7 @@ h2 {
         padding: 1rem;
     }
 }
+
 
 /**/
 #tag {
