@@ -3,16 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>지도 생성하기</title>
+    <title>Mapping Popping</title>
     
     <link href="index.css" rel="stylesheet">
 
     <!-- ICONS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-
-<body>
-
 
 <body style="position: relative; overflow: hidden;">
     <header>
@@ -47,6 +44,13 @@
     <div id="map" style="width:100vw; height:100vh;"></div>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=302d6955de9eba8ef692e4e4f54c0bc4"></script>
 
+    <button onclick="openInfo()" id="tag">
+        <div class="tag-marker" id="tag-marker">
+            YES
+        </div>
+    </button>
+
+
     <div class="info" id="info">
         <div class="info-title-box">       
              <h2>< 위치 이름 ></h2>
@@ -60,9 +64,7 @@
 
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=59e2e9a3192ec8f154b0fb1e5ebf29a6"></script>
     <script  type="text/javascript" src="./map.js"></script>
-
-    <script type="text/javascript" src="detail.js">
-    </script>
+    <script type="text/javascript" src="detail.js"></script>
 </body>
 </html>
 
