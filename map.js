@@ -15,19 +15,16 @@ window.onresize = function() {
     console.log(""); 
 
     // [이벤트 함수 호출]
-    panTo();
+    panTo(new kakao.maps.LatLng(36.601659208879646, 127.29777601594054));
 };
 
 //중심으로 이동하는 함수
-function panTo() {
-    // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(36.601659208879646, 127.29777601594054);
-    
+function panTo(moveLatLon) {
+
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);            
 }     
-
 
 // // // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
 // // // marker.setMap(null);    
@@ -43,15 +40,11 @@ var MARKER_WIDTH = 36, // 기본, 클릭 마커의 너비
     OVER_OFFSET_Y = OVER_MARKER_HEIGHT, // 오버 마커의 기준 Y좌표
     SPRITE_MARKER_URL1 = 'pin2.png',
     SPRITE_MARKER_URL2 = 'pin.png'; // 스프라이트 마커 이미지 URL
-    // SPRITE_WIDTH = 33, // 스프라이트 이미지 너비
-    // SPRITE_HEIGHT = 36, // 스프라이트 이미지 높이
-    // SPRITE_GAP = 10; // 스프라이트 이미지에서 마커간 간격
 
 var markerSize = new kakao.maps.Size(MARKER_WIDTH, MARKER_HEIGHT), // 기본, 클릭 마커의 크기
     markerOffset = new kakao.maps.Point(OFFSET_X, OFFSET_Y), // 기본, 클릭 마커의 기준좌표
     overMarkerSize = new kakao.maps.Size(OVER_MARKER_WIDTH, OVER_MARKER_HEIGHT), // 오버 마커의 크기
     overMarkerOffset = new kakao.maps.Point(OVER_OFFSET_X, OVER_OFFSET_Y); // 오버 마커의 기준 좌표
-    // spriteImageSize = new kakao.maps.Size(SPRITE_WIDTH, SPRITE_HEIGHT); // 스프라이트 이미지의 크기
 
 // 마커를 표시할 위치와 title 객체 배열입니다 
 var positions = [
@@ -86,8 +79,6 @@ for (var i = 0, len = positions.length; i < len; i++) {
     addMarker(positions[i].latlng, normalOrigin, overOrigin, clickOrigin, positions[i].title);
 
 }
-
-
 
 // 마커를 생성하고 지도 위에 표시하고, 마커에 mouseover, mouseout, click 이벤트를 등록하는 함수입니다
 function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
@@ -140,6 +131,8 @@ function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
 
             // 현재 클릭된 마커의 이미지는 클릭 이미지로 변경합니다
             marker.setImage(clickImage);
+
+            panTo(position);
         }
 
         // 클릭된 마커를 현재 클릭된 마커 객체로 설정합니다
@@ -173,20 +166,6 @@ function makeOutListener(infowindow) {
         infowindow.close();
     };
 }
-// // MakrerImage 객체를 생성하여 반환하는 함수입니다
-// function createMarkerImage(markerSize, offset, spriteOrigin) {
-//     var markerImage = new kakao.maps.MarkerImage(
-//         SPRITE_MARKER_URL, // 스프라이트 마커 이미지 URL
-//         markerSize, // 마커의 크기
-//         {
-//             offset: offset, // 마커 이미지에서의 기준 좌표
-//             spriteOrigin: spriteOrigin, // 스트라이프 이미지 중 사용할 영역의 좌상단 좌표
-//             spriteSize: spriteImageSize // 스프라이트 이미지의 크기
-//         }
-//     );
-    
-//     return markerImage;
-// }
 
 // MakrerImage 객체를 생성하여 반환하는 함수입니다
 function createMarkerImage(markerSprite, markerSize, offset, spriteOrigin) {
