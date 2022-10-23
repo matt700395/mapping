@@ -2,6 +2,8 @@ function openInfo() {
     document.getElementById("info").style.transition = "all 1s";
     document.getElementById("info").style.top = "16vh";
     document.getElementById("tag-marker").style.transform = "scale(0, 0)";
+    document.getElementById("footer").style.display = "none";
+    document.getElementById("logo").style.display = "none";
     document.getElementsByClassName("tags")[0].style.transform = "scale(0, 0)";
     document.getElementsByClassName("tags")[1].style.transform = "scale(0, 0)";
     document.getElementsByClassName("tags")[2].style.transform = "scale(0, 0)";
@@ -14,6 +16,8 @@ function closeInfo() {
     document.getElementsByClassName("tags")[0].style.transform = "scale(1, 1)";
     document.getElementsByClassName("tags")[1].style.transform = "scale(1, 1)";
     document.getElementsByClassName("tags")[2].style.transform = "scale(1, 1)";
+    document.getElementById("footer").style.display = "flex";
+    document.getElementById("logo").style.display = "block";
 }
 
 function cancelInfo() {

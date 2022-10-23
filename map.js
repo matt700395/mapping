@@ -223,4 +223,6 @@ document.getElementById("title").onclick = function () {
     document.getElementsByClassName("tags")[0].style.transform = "scale(1, 1)";
     document.getElementsByClassName("tags")[1].style.transform = "scale(1, 1)";
     document.getElementsByClassName("tags")[2].style.transform = "scale(1, 1)";
+    document.getElementById("footer").style.display = "flex";
+    document.getElementById("logo").style.display = "block";
 }
