@@ -19,7 +19,8 @@ var MARKER_WIDTH = 33, // 기본, 클릭 마커의 너비
     OVER_MARKER_HEIGHT = 42, // 오버 마커의 높이
     OVER_OFFSET_X = 13, // 오버 마커의 기준 X좌표
     OVER_OFFSET_Y = OVER_MARKER_HEIGHT, // 오버 마커의 기준 Y좌표
-    SPRITE_MARKER_URL = 'pin2.png'; // 스프라이트 마커 이미지 URL
+    SPRITE_MARKER_URL1 = 'pin2.png',
+    SPRITE_MARKER_URL2 = 'pin.png'; // 스프라이트 마커 이미지 URL
     // SPRITE_WIDTH = 33, // 스프라이트 이미지 너비
     // SPRITE_HEIGHT = 36, // 스프라이트 이미지 높이
     // SPRITE_GAP = 10; // 스프라이트 이미지에서 마커간 간격
@@ -70,9 +71,9 @@ for (var i = 0, len = positions.length; i < len; i++) {
 function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
 
     // 기본 마커이미지, 오버 마커이미지, 클릭 마커이미지를 생성합니다
-    var normalImage = createMarkerImage(markerSize, markerOffset, normalOrigin),
-        overImage = createMarkerImage(overMarkerSize, overMarkerOffset, overOrigin),
-        clickImage = createMarkerImage(markerSize, markerOffset, clickOrigin);
+    var normalImage = createMarkerImage(SPRITE_MARKER_URL1, markerSize, markerOffset, normalOrigin),
+        overImage = createMarkerImage(SPRITE_MARKER_URL2, overMarkerSize, overMarkerOffset, overOrigin),
+        clickImage = createMarkerImage(SPRITE_MARKER_URL2, markerSize, markerOffset, clickOrigin);
     
     // 마커를 생성하고 이미지는 기본 마커 이미지를 사용합니다
     var marker = new kakao.maps.Marker({
@@ -165,9 +166,9 @@ function makeOutListener(infowindow) {
 // }
 
 // MakrerImage 객체를 생성하여 반환하는 함수입니다
-function createMarkerImage(markerSize, offset, spriteOrigin) {
+function createMarkerImage(markerSprite, markerSize, offset, spriteOrigin) {
     var markerImage = new kakao.maps.MarkerImage(
-        SPRITE_MARKER_URL, // 스프라이트 마커 이미지 URL
+        markerSprite, // 스프라이트 마커 이미지 URL
         markerSize, // 마커의 크기
         {
             offset: offset, // 마커 이미지에서의 기준 좌표
