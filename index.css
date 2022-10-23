@@ -218,7 +218,7 @@ header {
 /* INFO */
 .info {
     position: absolute;
-    height: 23rem;
+    height: 52vh;
     background-color: white;
     z-index: 10;
     width: 100%;
