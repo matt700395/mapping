@@ -7,6 +7,25 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption);
 
+
+// 이동 제한 ... 왜 안 되지 ? ㅠ 
+var pos1 = new kakao.maps.LatLng(36, 127);
+var pos2 = new kakao.maps.LatLng(37, 128);
+
+var bounds = new kakao.maps.LatLngBounds(pos1, pos2);
+
+var constrainBounds = function() {
+    var center = map.getCenter();
+
+    if (!bounds.contain(center)) {
+        map.setCenter(new kakao.maps.LatLng(36.601659208879646, 127.29777601594054));
+    }
+};
+
+kakao.maps.event.addListener( map, 'drag', constrainBounds); 
+kakao.maps.event.addListener( map, 'zoom_changed', constrainBounds);
+
+
 //현재 브라우저크기 변하면 중심을 다시 셋팅하는 함수
 /* [html 화면 사이즈 변경 이벤트 감지] */
 window.onresize = function() {
@@ -134,9 +153,12 @@ function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
             marker.setImage(clickImage);
 
             // tag 컴포넌트 띄우기 
-            document.getElementById("tag-marker").style.display = "block";
+            document.getElementById("tag-marker").style.display = "flex";
             document.getElementById("tag-marker").style.transform = "scale(1, 1)";
             document.getElementById("tag-back").style.display = "block";
+            document.getElementsByClassName("tags")[0].style.transform = "scale(1, 1)";
+            document.getElementsByClassName("tags")[1].style.transform = "scale(1, 1)";
+            document.getElementsByClassName("tags")[2].style.transform = "scale(1, 1)";
             setDraggable(false);
 
             panTo(position);
@@ -192,4 +214,3 @@ function setDraggable(draggable) {
     // 마우스 드래그로 지도 이동 가능여부를 설정합니다
     map.setDraggable(draggable);    
 }
-

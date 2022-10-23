@@ -174,7 +174,7 @@ header {
 
 
 
-@media ( max-width: 867px ) {
+@media ( max-width: 955px ) {
     header {
         padding-bottom: 4rem;
         position: absolute;
@@ -279,10 +279,10 @@ h2 {
     top: 43vh;
     left: 45vw;
     z-index: 50;
-    background: white;
+    background: #B6A5E7;
     border-radius: 10rem;
-    width: 5rem;
-    height: 5rem;
+    width: 8rem;
+    height: 8rem;
     text-align: center;
     transition-property: transform;        
     transition-duration: 0.7s;       
@@ -292,7 +292,13 @@ h2 {
     -webkit-transition-timing-function: ease;
     border: 2px solid #977CE2;
     vertical-align: center;
-    display: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'HSSummer';
+    font-size: 1rem;
+    transform: scale(0, 0);
 }
 
 #tag-back {
@@ -304,4 +310,55 @@ h2 {
     z-index: 5;
     top:0;
     display: none;
+}
+
+.tags {
+    position: absolute;
+    z-index: 50;
+    background: white;
+    border: 2px solid #977CE2;
+    border-radius: 10rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-size: 1rem;
+    transition-property: transform;        
+    transition-duration: 0.7s;       
+    transition-timing-function: ease;
+    -webkit-transition-property: transform;        
+    -webkit-transition-duration: 0.7s;      
+    -webkit-transition-timing-function: ease;
+    transform: scale(0, 0);
+}
+
+@keyframes tag1 { 0% { top: 43vh; } 30% { top: 42vh; } 60% { top: 41.5vh } 90% { top: 42vh } 100% { top: 43vh } }
+#tag1 {
+    top: 43vh;
+    left: 23vw;
+    width: 6rem;
+    height: 6rem;
+    animation: tag1 1.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes tag2 { 0% { top: 73vh; } 30% { top: 73.5vh; } 60% { top: 74vh } 90% { top: 73.5vh } 100% { top: 73vh } }
+#tag2 {
+    top: 73vh;
+    left: 33vw;
+    width: 4.5rem;
+    height: 4.5rem;
+    animation: tag2 1.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes tag3  { 0% { top: 63vh; } 30% { top: 63.5vh; } 60% { top: 64vh } 90% { top: 63.5vh } 100% { top: 63vh } }
+#tag3 {
+    top: 63vh;
+    left: 68vw;
+    width: 7rem;
+    height: 7rem;
+    animation: tag3 2s infinite;
+    animation-timing-function: ease-in-out;
 }
