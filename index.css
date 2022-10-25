@@ -136,8 +136,8 @@ header {
     .title span {
         position: relative;
         animation: anime_textup 1.5s infinite;
-        margin-left: -0.3em;
-        margin-right: -0.3em;
+        margin-left: -0.15em;
+        margin-right: -0.15em;
     }
     .title span:nth-of-type(1) {
         animation-delay: .1s;
@@ -215,8 +215,10 @@ header {
         align-items: center;
     }
 
-    .title {
-        font-size: 1.5rem;
+    .title span {
+        font-size: 2rem;
+        margin-left: -0.2em;
+        margin-right: -0.2em;
     }
     
     .subtitle {
@@ -238,8 +240,6 @@ header {
     .title span {
         position: relative;
         animation: anime_textup 1.5s infinite;
-        margin-right: -0.05em;
-        margin-left: -0.05em;
     }
 }
   
