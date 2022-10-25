@@ -179,7 +179,7 @@ function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
     // kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
     // kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
 
-}
+};
 
 
 // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
@@ -187,14 +187,14 @@ function makeOverListener(map, marker, infowindow) {
     return function() {
         infowindow.open(map, marker);
     };
-}
+};
 
 // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
 function makeOutListener(infowindow) {
     return function() {
         infowindow.close();
     };
-}
+};
 
 // MakrerImage 객체를 생성하여 반환하는 함수입니다
 function createMarkerImage(markerSprite, markerSize, offset, spriteOrigin) {
@@ -207,13 +207,13 @@ function createMarkerImage(markerSprite, markerSize, offset, spriteOrigin) {
     );
     
     return markerImage;
-}
+};
 
 // 버튼 클릭에 따라 지도 이동 기능을 막거나 풀고 싶은 경우에는 map.setDraggable 함수를 사용합니다
 function setDraggable(draggable) {
     // 마우스 드래그로 지도 이동 가능여부를 설정합니다
     map.setDraggable(draggable);    
-}
+};
 
 document.getElementById("title").onclick = function () {
     map.setCenter(new kakao.maps.LatLng(36.601659208879646, 127.29777601594054));
@@ -225,4 +225,4 @@ document.getElementById("title").onclick = function () {
     document.getElementsByClassName("tags")[2].style.transform = "scale(1, 1)";
     document.getElementById("footer").style.display = "flex";
     document.getElementById("logo").style.display = "block";
-}
+};
