@@ -47,6 +47,11 @@ button {
     background-color: transparent;
 }
 
+a {
+    color: #4C2E5C;
+    text-decoration: none;
+}
+
 
 /* FONT */
 @font-face {
@@ -359,7 +364,7 @@ h2 {
     justify-content: center;
     align-items: center;
     font-family: 'LeferiPoint-WhiteObliqueA';
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     transition-property: transform;        
     transition-duration: 0.7s;       
     transition-timing-function: ease;
@@ -462,7 +467,7 @@ content
 }
 
 .content-item {
-    height: 5rem;
+    min-height: 5rem;
     border: 1px solid #7A4696;
     border-radius: 3rem;
     display: block;
@@ -542,40 +547,39 @@ b {
         top: 8rem;
     }
     
-    .content-container {
-        margin-top: 7.5rem;
-    }
-    
-    .tag-item {
-        padding: 0.2rem 1rem;
-        border-radius: 1rem;
-        border: 1px solid #7A4696 ;
-        border-bottom: 2px solid #7A4696;
-        margin: 0.5rem;
-    }
-    
-    .item-container {
-        width: 100%;
-        padding: 1rem;
-        margin: 0.5rem;
-        display: block;
-    }
-    
-    .content-question {
-        padding-left: 2.5rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .content-item {
-        height: 5rem;
-        border: 1px solid #7A4696;
-        border-radius: 3rem;
-        display: block;
-        padding: 1.5rem 2rem;
-        text-align: center;
-        line-height: 1.5;
-    }
-    
+    @keyframes tag1 { 0% { top: 43vh; } 30% { top: 42vh; } 60% { top: 41.5vh } 90% { top: 42vh } 100% { top: 43vh } }
+#tag1 {
+    top: 43vh;
+    left: 3vw;
+    width: 6rem;
+    height: 6rem;
+    animation: tag1 1.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes tag2 { 0% { top: 73vh; } 30% { top: 73.5vh; } 60% { top: 74vh } 90% { top: 73.5vh } 100% { top: 73vh } }
+#tag2 {
+    top: 73vh;
+    left: 13vw;
+    width: 4.5rem;
+    height: 4.5rem;
+    animation: tag2 1.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes tag3  { 0% { top: 63vh; } 30% { top: 63.5vh; } 60% { top: 64vh } 90% { top: 63.5vh } 100% { top: 63vh } }
+#tag3 {
+    top: 63vh;
+    left: 48vw;
+    width: 7rem;
+    height: 7rem;
+    animation: tag3 2s infinite;
+    animation-timing-function: ease-in-out;
+}
+.tag-marker {
+    left: 42vw;
+    top: 35vh;
+}
 }
 
 footer {
