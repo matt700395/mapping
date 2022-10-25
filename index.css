@@ -82,7 +82,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .title-box {
@@ -206,7 +206,7 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 10px;
+        padding-top: 30px;
     }
     
     .title-box {
@@ -331,7 +331,9 @@ h2 {
     justify-content: center;
     align-items: center;
     font-family: 'HSSummer';
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 0.3rem;
     transform: scale(0, 0);
 }
 
@@ -357,7 +359,7 @@ h2 {
     justify-content: center;
     align-items: center;
     font-family: 'LeferiPoint-WhiteObliqueA';
-    font-size: 1rem;
+    font-size: 0.5rem;
     transition-property: transform;        
     transition-duration: 0.7s;       
     transition-timing-function: ease;
@@ -365,6 +367,7 @@ h2 {
     -webkit-transition-duration: 0.7s;      
     -webkit-transition-timing-function: ease;
     transform: scale(0, 0);
+    padding: 0.3rem;
 }
 
 @keyframes tag1 { 0% { top: 43vh; } 30% { top: 42vh; } 60% { top: 41.5vh } 90% { top: 42vh } 100% { top: 43vh } }
