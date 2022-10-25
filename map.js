@@ -65,8 +65,23 @@ var markerSize = new kakao.maps.Size(MARKER_WIDTH, MARKER_HEIGHT), // 기본, �
     overMarkerSize = new kakao.maps.Size(OVER_MARKER_WIDTH, OVER_MARKER_HEIGHT), // 오버 마커의 크기
     overMarkerOffset = new kakao.maps.Point(OVER_OFFSET_X, OVER_OFFSET_Y); // 오버 마커의 기준 좌표
 
-// 마커를 표시할 위치와 title 객체 배열입니다 
-var positions = [
+
+// 마커를 표시할 위치와 title 객체 배열입니다
+var positions = [];
+
+for ( let i=0 ; i < jsonData.length ; i++ ) {
+    const value = jsonData[i];
+    var newPos = {}
+    newPos["idx"] = i;
+    console.log(newPos);
+    newPos["title"] = value["Place"];  
+    const coords = jsonData[i]["Coord"].split(','); 
+    newPos["latlng"] = new kakao.maps.LatLng( parseFloat(coords[0]), parseFloat(coords[1]));
+    positions.push(newPos);
+}
+
+var  selectedMarker = null;
+/*
     {
         title: '카카오', 
         latlng: new kakao.maps.LatLng(36.601659208879646, 127.29777601594054)
@@ -83,7 +98,8 @@ var positions = [
         title: '근린공원',
         latlng: new kakao.maps.LatLng(36.6013, 127.29777601594054)
     }
-], selectedMarker = null;
+]
+*/
 
 // 지도 위에 마커를 표시합니다
 for (var i = 0, len = positions.length; i < len; i++) {
@@ -95,12 +111,12 @@ for (var i = 0, len = positions.length; i < len; i++) {
         overOrigin = new kakao.maps.Point(gapX * 2, overOriginY); // 스프라이트 이미지에서 클릭 마커로 사용할 영역의 좌상단 좌표
         
     // 마커를 생성하고 지도위에 표시합니다
-    addMarker(positions[i].latlng, normalOrigin, overOrigin, clickOrigin, positions[i].title);
+    addMarker(positions[i].latlng, normalOrigin, overOrigin, clickOrigin, positions[i].title, positions[i].idx);
 
 }
 
 // 마커를 생성하고 지도 위에 표시하고, 마커에 mouseover, mouseout, click 이벤트를 등록하는 함수입니다
-function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
+function addMarker(position, normalOrigin, overOrigin, clickOrigin, title, idx) {
 
     // 기본 마커이미지, 오버 마커이미지, 클릭 마커이미지를 생성합니다
     var normalImage = createMarkerImage(SPRITE_MARKER_URL1, markerSize, markerOffset, normalOrigin),
@@ -152,6 +168,18 @@ function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
             // 현재 클릭된 마커의 이미지는 클릭 이미지로 변경합니다
             marker.setImage(clickImage);
 
+            // data 채우기 
+            const tags = jsonData[idx]["Tag"].split(',');
+            document.getElementsByClassName("tags")[0].innerHTML = tags[0];
+            document.getElementsByClassName("tags")[1].innerHTML = tags[1];
+            document.getElementsByClassName("tags")[2].innerHTML = tags[2];
+            document.getElementsByClassName("tag-item")[0].innerHTML = tags[0];
+            document.getElementsByClassName("tag-item")[1].innerHTML = tags[1];
+            document.getElementsByClassName("tag-item")[2].innerHTML = tags[2];
+            document.getElementById("tag-marker").innerHTML = jsonData[idx]["Place"];
+
+            document.getElementById("tag").value = idx;
+
             // tag 컴포넌트 띄우기 
             document.getElementById("tag-marker").style.display = "flex";
             document.getElementById("tag-marker").style.transform = "scale(1, 1)";
@@ -159,6 +187,7 @@ function addMarker(position, normalOrigin, overOrigin, clickOrigin, title) {
             document.getElementsByClassName("tags")[0].style.transform = "scale(1, 1)";
             document.getElementsByClassName("tags")[1].style.transform = "scale(1, 1)";
             document.getElementsByClassName("tags")[2].style.transform = "scale(1, 1)";
+
             setDraggable(false);
 
             panTo(position);

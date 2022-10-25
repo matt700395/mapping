@@ -9,6 +9,8 @@
 
     <!-- ICONS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script type="text/javascript" src="data.js"></script>
 </head>
 
 <body style="position: relative; overflow: hidden;">
@@ -65,13 +67,13 @@
         <div class="info-title-box">       
             <h2 class="content-title">
                 <img src="map.png" width="100rem" class="map-vector"/>
-                <span>조치원 전통 시장</span>
+                <span id="place">조치원 전통 시장</span>
             </h2>
 
             <div class="side-title">
                 <p class="desc">
-                    <span class="bold">세옹 </span>은(는) 조치원을 오랜 시간 떠나게 됩니다. <br>
-                    마지막으로 방문하고 싶은 조치원 내 장소는 어디인가요?
+                    <span class="bold" id="writer">세옹 </span>은(는) 조치원을 오랜 시간 떠나게 됩니다. <br>
+                    <span id="Category">마지막으로 방문하고 싶은 조치원 내 장소는 어디인가요?</span>
                 </p>
                 
                 <button class="close-btn material-icons" onClick="closeInfo();">close</button>
@@ -80,23 +82,22 @@
 
         <div class="content-container">
             <div class="tag-container">
-                <span class="tag-item">시장 맛집</span>
-                <span class="tag-item">떠나기 전</span>
-                <span class="tag-item">놀러온 친구들</span>
-                <span class="tag-item">부모님</span>
+                <span class="tag-item" id="tag_1">시장 맛집</span>
+                <span class="tag-item" id="tag_2">놀러온 친구들</span>
+                <span class="tag-item" id="tag_3">부모님과 함께</span>
             </div>
             
             <div class="content">
                 <span class="item-container">  
                     <h5 class="content-question">그 장소를 <b>어떻게</b> 알게 되었나요? </h5>
-                    <div class="content-item">
+                    <div class="content-item" id="Q1">
                         친구 맛집을 데려다준다고 해서 따라갔다가
                     </div>
                 </span>
 
                 <span class="item-container">  
                     <h5 class="content-question"><b>누구와 언제</b> 방문하고 싶으신가요?</h5>
-                    <div class="content-item">
+                    <div class="content-item" id="Q2">
                         부모님이나 타지역에서 놀러온 친구들과 
                         점심이나 떠나기 전에 요깃거리를 사러
                     </div>
@@ -104,14 +105,14 @@
 
                 <span class="item-container">  
                     <h5 class="content-question"><b>왜</b> 그 곳에 가고 싶으신가요?</h5>
-                    <div class="content-item">
+                    <div class="content-item" id="Q3">
                         시장에 맛있는 음식이 많아요 ~
                     </div>
                 </span>
 
                 <span class="item-container">  
                     <h5 class="content-question">그 곳에서 <b>무엇을</b> 하고 싶으신가요?</h5>
-                    <div class="content-item">
+                    <div class="content-item" id="Q4">
                         지금까지 먹고 싶었던 거 하나씩 다 맛보기
                     </div>
                 </span>
@@ -132,9 +133,8 @@
     <a href="https://cut-bar-1c4.notion.site/91ee9c40ff8c41dfb00a222a44576ffa"><img src="logo.png" class="logo" id="logo"></a>
 
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=59e2e9a3192ec8f154b0fb1e5ebf29a6"></script>
-    <script  type="text/javascript" src="map.js"></script>
+    <script type="text/javascript" src="map.js"></script>
     <script type="text/javascript" src="detail.js"></script>
-    <script type="text/javascript" src="data.js"></script>
 </body>
 </html>
 
