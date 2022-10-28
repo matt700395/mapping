@@ -76,6 +76,12 @@ a {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'LeferiPoint-BlackObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* HEADER */
 header {
@@ -320,8 +326,8 @@ h2 {
     z-index: 50;
     background: #7A4696;
     border-radius: 10rem;
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
     text-align: center;
     transition-property: transform;        
     transition-duration: 0.7s;       
@@ -336,9 +342,9 @@ h2 {
     justify-content: center;
     align-items: center;
     font-family: 'HSSummer';
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.8;
-    padding: 0.3rem;
+    padding: 0.5rem;
     transform: scale(0, 0);
 }
 
@@ -363,8 +369,9 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #4C2E5C;
     font-family: 'LeferiPoint-WhiteObliqueA';
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     transition-property: transform;        
     transition-duration: 0.7s;       
     transition-timing-function: ease;
@@ -447,11 +454,12 @@ content
 }
 
 .tag-item {
-    padding: 0.2rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 1rem;
     border: 1px solid #7A4696 ;
     border-bottom: 2px solid #7A4696;
     margin: 0.5rem;
+    font-size: 1.1rem;
 }
 
 .item-container {
@@ -464,16 +472,20 @@ content
 .content-question {
     padding-left: 2.5rem;
     margin-bottom: 0.5rem;
+    font-size: 1.3rem;
 }
 
 .content-item {
     min-height: 5rem;
     border: 1px solid #7A4696;
     border-radius: 3rem;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1.5rem 2rem;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.8;
+    font-size: 1.1rem;
 }
 
 
@@ -498,6 +510,7 @@ b {
     line-height: 2;
     margin-right: 2rem;
     color: #4C2E5C;
+    font-size: 1.1rem;
 }
 
 .side-title {
@@ -601,4 +614,8 @@ footer {
     right: 2rem;
     height: 10rem;
     width: 10rem;
+}
+
+#category {
+    font-family: 'LeferiPoint-BlackObliqueA';
 }

@@ -17,9 +17,9 @@ function openInfo() {
     document.getElementById("Q4").innerHTML = jsonData[idx]["Q4"];
     document.getElementById("writer").innerHTML = jsonData[idx]["Writer"];
     if (  jsonData[idx]["Category"] == "Last") {
-        document.getElementById("category").innerHTML = "마지막으로 방문하고 싶은 조치원 내 장소는 어디인가요?";
+        document.getElementById("category").innerHTML = "마지막으로 방문하고 싶은 곳은 어디인가요?";
     } else {
-        document.getElementById("category").innerHTML = "돌아와 처음으로 방문하고 싶은 조치원 내 장소는 어디인가요?";
+        document.getElementById("category").innerHTML = "돌아와서 처음으로 방문하고 싶은 곳은 어디인가요?";
     }
     
 }
