@@ -440,6 +440,7 @@ content
     display: flex;
     flex-wrap: wrap;
     text-align: left;
+    margin-top: 0.5rem;
     padding-left: 5rem;
 }
 
