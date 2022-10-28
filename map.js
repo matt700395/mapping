@@ -1,7 +1,7 @@
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(36.601659208879646, 127.29777601594054), // 지도의 중심좌표
-        level: 6 // 지도의 확대 레벨
+        center: new kakao.maps.LatLng(36.606535, 127.293943), // 지도의 중심좌표
+        level: 5 // 지도의 확대 레벨
     };
 
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
@@ -18,7 +18,7 @@ var constrainBounds = function() {
     var center = map.getCenter();
 
     if (!bounds.contain(center)) {
-        map.setCenter(new kakao.maps.LatLng(36.601659208879646, 127.29777601594054));
+        map.setCenter(new kakao.maps.LatLng(36.606535, 127.293943));
     }
 };
 
@@ -245,7 +245,7 @@ function setDraggable(draggable) {
 };
 
 document.getElementById("title").onclick = function () {
-    map.setCenter(new kakao.maps.LatLng(36.601659208879646, 127.29777601594054));
+    map.setCenter(new kakao.maps.LatLng(36.606535, 127.293943));
     map.setLevel(6, {animate: true});
     document.getElementById("info").style.transition = "all 1s";
     document.getElementById("info").style.top = "100vh";

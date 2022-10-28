@@ -88,7 +88,7 @@ header {
     background: linear-gradient(#7A4696, #A673C1, transparent);
     padding-bottom: 4rem;
     position: absolute;
-    height: 7rem;
+    height: 5rem;
     z-index: 10;
     width: 100%;
     display: flex;
@@ -599,7 +599,7 @@ b {
 footer {
     z-index: 2;
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 0.5rem;
     padding: 0.5rem;
     background-color: white;
     height: 3rem;
