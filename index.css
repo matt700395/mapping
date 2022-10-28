@@ -598,7 +598,8 @@ b {
 footer {
     z-index: 2;
     position: absolute;
-    bottom: 1rem;
+    bottom: 1.5rem;
+    padding: 0.5rem;
     background-color: white;
     height: 3rem;
     width: 100%;
@@ -610,7 +611,7 @@ footer {
 .logo {
     z-index: 2;
     position: absolute;
-    bottom: 4rem;
+    bottom: 6rem;
     right: 2rem;
     height: 10rem;
     width: 10rem;
