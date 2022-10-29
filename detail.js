@@ -21,6 +21,8 @@ function openInfo() {
     } else {
         document.getElementById("category").innerHTML = "돌아와서 처음으로 방문하고 싶은 곳은 어디인가요?";
     }
+    const img = document.querySelector("img")
+    img.src = jsonData[idx]["Image1"];
     
 }
 
@@ -43,3 +45,4 @@ function cancelInfo() {
     document.getElementsByClassName("tags")[1].style.transform = "scale(0, 0)";
     document.getElementsByClassName("tags")[2].style.transform = "scale(0, 0)";
 }
+
