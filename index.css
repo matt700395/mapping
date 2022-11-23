@@ -600,6 +600,10 @@ b {
 }
 }
 
+#footer_logo {
+    width: auto;
+}
+
 footer {
     z-index: 2;
     position: absolute;
@@ -607,11 +611,12 @@ footer {
     padding: 0.5rem;
     background-color: white;
     height: 3rem;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .logo {
     z-index: 2;

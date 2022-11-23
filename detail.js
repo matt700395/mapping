@@ -8,6 +8,8 @@ function openInfo() {
     document.getElementsByClassName("tags")[1].style.transform = "scale(0, 0)";
     document.getElementsByClassName("tags")[2].style.transform = "scale(0, 0)";
 
+
+    
     // data 채우기
     let idx = document.getElementById("tag").value;
     document.getElementById("place").innerHTML = jsonData[idx]["Place"];
@@ -23,8 +25,9 @@ function openInfo() {
     }
     const img = document.querySelector("img")
     img.src = jsonData[idx]["Image1"];
-    
 }
+
+
 
 function closeInfo() {
     document.getElementById("info").style.transition = "all 1s";

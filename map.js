@@ -244,6 +244,8 @@ function setDraggable(draggable) {
     map.setDraggable(draggable);    
 };
 
+
+
 document.getElementById("title").onclick = function () {
     map.setCenter(new kakao.maps.LatLng(36.606535, 127.293943));
     map.setLevel(6, {animate: true});
