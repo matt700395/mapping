@@ -132,6 +132,10 @@ header {
     margin-top: 0.5rem;
     margin-left: 3rem;
     margin-right: 3rem;
+    transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    -webkit-transform: scaleX(1);
 }
 
 .bubble-right {
