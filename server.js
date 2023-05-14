@@ -45,3 +45,7 @@ server.use((err, req, res, next) => {
     res.status(err.status || 500);
     console.trace(err);
 });
+
+server.listen(server.get('port'), () => {
+    console.log('8888 서버 실행');
+});
