@@ -9,7 +9,7 @@ class User extends Sequelize.Model {
         return super.init({ // 첫번째 객체 인수는 테이블 필드에 대한 설정
                 id: {
                     comment: "아이디",
-                    type: DataTypes.INTEGER,
+                    type: DataTypes.STRING(20),
                     primaryKey: true,
                     allowNull: false,
                     unique: true,
@@ -55,14 +55,19 @@ class User extends Sequelize.Model {
     // 다른 모델과의 관계
     static associate(db) { // 인자로 index.js에서 만든 여러 테이블이 저장되어있는 db객체를 받을 것이다.
 
-        db.User.hasMany(db.article, {
+        db.User.hasMany(db.Article, {
             foreignKey: 'commenter',
             sourceKey: 'id',
             onDelete: 'cascade',
             onUpdate: 'cascade'
         });
-        // db.User (hasMany) db.Comment = 1:N 관계 이다.  
-        // db.User는 가지고있다. 많이. db.Comment를
+        // db.User (hasMany) db.article = 1:N 관계 이다.  
+
+        db.User.belongsToMany(db.Place, {
+            through: 'like'
+        });
+        //User와 N:M 관계. 새로운 모델인 like가 생성된다.
+
     }
 };
 
